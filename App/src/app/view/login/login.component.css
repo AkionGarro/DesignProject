@@ -41,7 +41,7 @@ h2 {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #fff;
+  background: #000;
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -59,6 +59,11 @@ h2 {
   text-align: center;
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
+  color: #000;
+}
+
+.bg-c {
+  color: #000;
 }
 
 /* TABS */
@@ -245,6 +250,8 @@ input[type="text"]:placeholder {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
+  background-color: #fff;
+  color: #000;
 }
 
 /* Simple CSS3 Fade-in Animation */
