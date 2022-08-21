@@ -9,6 +9,10 @@
   text-decoration: none;
   color: black;
 }
+.navHeader a:hover {
+  color: red;
+  cursor: pointer;
+}
 
 .categories {
   width: 80%;

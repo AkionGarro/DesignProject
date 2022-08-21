@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ConnectionService } from 'src/app/services/api/connection.service';
+import { cocktailI } from 'src/app/models/cocktail.interface';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,27 +9,33 @@ import { ConnectionService } from 'src/app/services/api/connection.service';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  constructor(private api: ConnectionService) {}
+  constructor(private api: ConnectionService, private router: Router) {}
 
   ngOnInit(): void {
+    var products: cocktailI[];
     this.api.getRamdomCocktail().subscribe((data) => {
-      console.log(data);
+      products = data;
+      console.log(products);
     });
 
     this.api.getCocktailByName('margarita').subscribe((data) => {
-      console.log(data);
+      products = data;
+      console.log(products);
     });
 
     this.api.getNonOrAlcoholicCocktail('Optional alcohol').subscribe((data) => {
-      console.log(data);
+      products = data;
+      console.log(products);
     });
 
     this.api.getCocktailByCategory('Cocktail').subscribe((data) => {
-      console.log(data);
+      products = data;
+      console.log(products);
     });
 
     this.api.getCocktailByGlass('Collins glass').subscribe((data) => {
-      console.log(data);
+      products = data;
+      console.log(products);
     });
   }
 }
