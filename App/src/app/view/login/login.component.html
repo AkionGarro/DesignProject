@@ -10,27 +10,27 @@
     </div>
 
     <!-- Login Form -->
-    <form>
+    <form [formGroup]="loginForm">
       <input
         type="text"
         id="login"
         class="fadeIn second"
-        name="login"
+        formControlName="username"
         placeholder="login"
       />
       <input
-        type="text"
+        type="password"
         id="password"
         class="fadeIn third"
-        name="login"
+        formControlName="password"
         placeholder="password"
       />
-      <input type="submit" class="fadeIn fourth" value="Log In" />
+      <input
+        type="submit"
+        class="fadeIn fourth"
+        value="Log In"
+        (click)="goToDashBoard()"
+      />
     </form>
-
-    <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a class="underlineHover bg-c" href="#">Forgot Password?</a>
-    </div>
   </div>
 </div>
