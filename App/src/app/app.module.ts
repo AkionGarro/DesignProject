@@ -11,7 +11,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './view/dashboard/dashboard.component';
 import { ProductByAlcoholicComponent } from './view/dashboard/product-by-alcoholic/product-by-alcoholic.component';
 import { ProductByGlassComponent } from './view/dashboard/product-by-glass/product-by-glass.component';
-import { ProductByRamdomComponent } from './view/dashboard/product-by-ramdom/product-by-ramdom.component';
 import { ProductByCategoryComponent } from './view/dashboard/product-by-category/product-by-category.component';
 
 @NgModule({
@@ -23,7 +22,6 @@ import { ProductByCategoryComponent } from './view/dashboard/product-by-category
     DashboardComponent,
     ProductByAlcoholicComponent,
     ProductByGlassComponent,
-    ProductByRamdomComponent,
     ProductByCategoryComponent,
   ],
   imports: [

@@ -19,10 +19,6 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['product-by-glass']);
   }
 
-  goToProductByRamdom() {
-    this.router.navigate(['product-by-ramdom']);
-  }
-
   goToProductByAlcoholic() {
     this.router.navigate(['product-by-alcoholic']);
   }
