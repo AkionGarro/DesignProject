@@ -43,7 +43,9 @@
         <tr *ngFor="let product of products">
           <th scope="row">{{ product.idDrink }}</th>
           <td>{{ product.strDrink }}</td>
-          <td>{{ product.strDrinkThumb }}</td>
+          <td>
+            <img class="img-size" src="{{ product.strDrinkThumb }}" alt="img" />
+          </td>
         </tr>
       </tbody>
     </table>

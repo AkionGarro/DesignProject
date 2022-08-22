@@ -19,3 +19,8 @@
 .btn {
   width: 8rem;
 }
+
+.img-size {
+  max-width: 8rem;
+  max-height: 8rem;
+}
