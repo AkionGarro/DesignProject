@@ -1,3 +1,51 @@
 <app-header></app-header>
-<p>product-by-alcoholic works!</p>
+<div class="show-container">
+  <div class="show-categories">
+    <div class="col-sm-10">
+      <select
+        class="form-control"
+        name="categoryValues"
+        (change)="changeCategoryProducts($event)"
+      >
+        <option>Select Category</option>
+
+        <option
+          [value]="category.strAlcoholic"
+          *ngFor="let category of categories"
+        >
+          {{ category.strAlcoholic }}
+        </option>
+      </select>
+    </div>
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-toggle="button"
+      aria-pressed="false"
+      autocomplete="off"
+      (click)="newProduct()"
+    >
+      Search
+    </button>
+  </div>
+
+  <div class="show-products">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <th scope="row">{{ product.idDrink }}</th>
+          <td>{{ product.strDrink }}</td>
+          <td>{{ product.strDrinkThumb }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 <app-footer></app-footer>
