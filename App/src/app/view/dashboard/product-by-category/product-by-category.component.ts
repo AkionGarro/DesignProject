@@ -8,14 +8,28 @@ import { categoryCocktail } from 'src/app/models/categoryCocktail';
   styleUrls: ['./product-by-category.component.css'],
 })
 export class ProductByCategoryComponent implements OnInit {
-  products: cocktailI[] = [];
-  categories: any;
+  products = Array<any>();
+  categories = Array<any>();
+  selectedValue: any;
+  changeCategoryProducts(e) {
+    this.selectedValue = e.target.value;
+  }
+
   constructor(private api: ConnectionService) {}
 
   ngOnInit(): void {
     this.api.getCategories().subscribe((data) => {
-      this.categories = data;
-      console.log(this.categories);
+      this.categories = data['drinks'];
+    });
+
+    this.api.getCocktailByCategory('Ordinary Drink').subscribe((data) => {
+      this.products = data['drinks'];
+    });
+  }
+
+  newProduct() {
+    this.api.getCocktailByCategory(this.selectedValue).subscribe((data) => {
+      this.products = data['drinks'];
     });
   }
 }

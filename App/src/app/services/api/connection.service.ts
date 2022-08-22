@@ -10,43 +10,43 @@ export class ConnectionService {
   url: string = 'https://www.thecocktaildb.com/api/json/v1/1/';
   constructor(private http: HttpClient) {}
 
-  getCocktailByName(name: string): Observable<cocktailI[]> {
+  getCocktailByName(name: string): Observable<any[]> {
     let dir = this.url + 'search.php?s=' + name;
-    return this.http.get<cocktailI[]>(dir);
+    return this.http.get<any[]>(dir);
   }
 
-  getRamdomCocktail(): Observable<cocktailI[]> {
+  getRamdomCocktail(): Observable<any[]> {
     let dir = this.url + 'random.php';
-    return this.http.get<cocktailI[]>(dir);
+    return this.http.get<any[]>(dir);
   }
 
-  getNonOrAlcoholicCocktail(type: String): Observable<cocktailI[]> {
+  getNonOrAlcoholicCocktail(type: String): Observable<any[]> {
     let dir = this.url + 'filter.php?a=' + type;
-    return this.http.get<cocktailI[]>(dir);
+    return this.http.get<any[]>(dir);
   }
 
-  getCocktailByCategory(category: string): Observable<cocktailI[]> {
+  getCocktailByCategory(category: string): Observable<any[]> {
     let dir = this.url + 'filter.php?c=' + category;
-    return this.http.get<cocktailI[]>(dir);
+    return this.http.get<any[]>(dir);
   }
 
-  getCocktailByGlass(glass: string): Observable<cocktailI[]> {
+  getCocktailByGlass(glass: string): Observable<any[]> {
     let dir = this.url + 'filter.php?g=' + glass;
-    return this.http.get<cocktailI[]>(dir);
+    return this.http.get<any[]>(dir);
   }
 
-  getCategories(): Observable<categoryCocktail[]> {
+  getCategories(): Observable<any[]> {
     let dir = this.url + 'list.php?c=list';
-    return this.http.get<categoryCocktail[]>(dir);
+    return this.http.get<any[]>(dir);
   }
 
-  getGlasses(): Observable<categoryCocktail[]> {
+  getGlasses(): Observable<any[]> {
     let dir = this.url + 'list.php?g=list';
-    return this.http.get<categoryCocktail[]>(dir);
+    return this.http.get<any[]>(dir);
   }
 
-  getAlcoholicFilters(): Observable<categoryCocktail[]> {
+  getAlcoholicFilters(): Observable<any[]> {
     let dir = this.url + 'list.php?a=list';
-    return this.http.get<categoryCocktail[]>(dir);
+    return this.http.get<any[]>(dir);
   }
 }
