@@ -43,7 +43,9 @@ export class GoogleApiService {
           this.oAuthService.initLoginFlow();
         }else{
           this.oAuthService.loadUserProfile().then( (userProfile) => {
-            console.log(userProfile['info']['name']);
+            console.log('Name: ', userProfile['info']['name']);
+            console.log('Email: ', userProfile['info']['email']);
+            console.log('Email Verified: ', userProfile['info']['email_verified']);
             this.userProfileSubject.next(userProfile as UserInfo);
             this.router.navigate(['dashboard']);
           })
