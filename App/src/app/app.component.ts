@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GoogleApiService, UserInfo } from './services/google-api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'App';
+  
+
+  constructor() {
+    
+
+  }
+
 }

@@ -3,12 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { cocktailI } from 'src/app/models/cocktail.interface';
 import { categoryCocktail } from 'src/app/models/categoryCocktail';
+
+
 @Injectable({
   providedIn: 'root',
 })
 export class ConnectionService {
   url: string = 'https://www.thecocktaildb.com/api/json/v1/1/';
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getCocktailByName(name: string): Observable<any[]> {
     let dir = this.url + 'search.php?s=' + name;

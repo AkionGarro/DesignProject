@@ -12,6 +12,7 @@ import { DashboardComponent } from './view/dashboard/dashboard.component';
 import { ProductByAlcoholicComponent } from './view/dashboard/product-by-alcoholic/product-by-alcoholic.component';
 import { ProductByGlassComponent } from './view/dashboard/product-by-glass/product-by-glass.component';
 import { ProductByCategoryComponent } from './view/dashboard/product-by-category/product-by-category.component';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ProductByCategoryComponent } from './view/dashboard/product-by-category
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    OAuthModule.forRoot(),
     FormsModule,
   ],
   providers: [],
