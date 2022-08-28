@@ -14,6 +14,10 @@ import { ProductByGlassComponent } from './view/dashboard/product-by-glass/produ
 import { ProductByCategoryComponent } from './view/dashboard/product-by-category/product-by-category.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
 
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { ViewCocktailComponent } from './view/dashboard/view-cocktail/view-cocktail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +28,7 @@ import { OAuthModule } from 'angular-oauth2-oidc';
     ProductByAlcoholicComponent,
     ProductByGlassComponent,
     ProductByCategoryComponent,
+    ViewCocktailComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +37,8 @@ import { OAuthModule } from 'angular-oauth2-oidc';
     ReactiveFormsModule,
     OAuthModule.forRoot(),
     FormsModule,
+    MatCardModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -5,6 +5,7 @@ import { DashboardComponent } from './view/dashboard/dashboard.component';
 import { ProductByAlcoholicComponent } from './view/dashboard/product-by-alcoholic/product-by-alcoholic.component';
 import { ProductByGlassComponent } from './view/dashboard/product-by-glass/product-by-glass.component';
 import { ProductByCategoryComponent } from './view/dashboard/product-by-category/product-by-category.component';
+import { ViewCocktailComponent } from './view/dashboard/view-cocktail/view-cocktail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'product-by-alcoholic', component: ProductByAlcoholicComponent },
   { path: 'product-by-glass', component: ProductByGlassComponent },
   { path: 'product-by-category', component: ProductByCategoryComponent },
+  { path: 'view-cocktail/:var', component: ViewCocktailComponent }
 ];
 
 @NgModule({

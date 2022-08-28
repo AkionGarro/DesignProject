@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ConnectionService } from 'src/app/services/api/connection.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class ProductByGlassComponent implements OnInit {
     this.selectedValue = e.target.value;
   }
 
-  constructor(private api: ConnectionService) {}
+  constructor(private api: ConnectionService, private router: Router) {}
 
   ngOnInit(): void {
     this.api.getGlasses().subscribe((data) => {
@@ -30,5 +31,9 @@ export class ProductByGlassComponent implements OnInit {
     this.api.getCocktailByGlass(this.selectedValue).subscribe((data) => {
       this.products = data['drinks'];
     });
+  }
+  verCocktel(id) {
+    let link = '/view-cocktail/' + id;
+    this.router.navigate([link]);
   }
 }

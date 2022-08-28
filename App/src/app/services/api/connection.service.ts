@@ -17,6 +17,11 @@ export class ConnectionService {
     return this.http.get<any[]>(dir);
   }
 
+  getCocktailById(name: string): Observable<any[]> {
+    let dir = this.url + 'lookup.php?i=' + name;
+    return this.http.get<any[]>(dir);
+  }
+
   getRamdomCocktail(): Observable<any[]> {
     let dir = this.url + 'random.php';
     return this.http.get<any[]>(dir);
@@ -24,6 +29,7 @@ export class ConnectionService {
 
   getNonOrAlcoholicCocktail(type: String): Observable<any[]> {
     let dir = this.url + 'filter.php?a=' + type;
+    console.log("dir: ", dir);
     return this.http.get<any[]>(dir);
   }
 
