@@ -22,6 +22,9 @@ export class HeaderComponent implements OnInit {
   goToProductByAlcoholic() {
     this.router.navigate(['product-by-alcoholic']);
   }
+  goToProductByName() {
+    this.router.navigate(['product-by-name']);
+  }
   goToDashBoard() {
     this.router.navigate(['dashboard']);
   }

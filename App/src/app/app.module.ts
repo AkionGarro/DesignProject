@@ -17,6 +17,7 @@ import { OAuthModule } from 'angular-oauth2-oidc';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ViewCocktailComponent } from './view/dashboard/view-cocktail/view-cocktail.component';
+import { ProductByNameComponent } from './view/dashboard/product-by-name/product-by-name.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ViewCocktailComponent } from './view/dashboard/view-cocktail/view-cockt
     ProductByGlassComponent,
     ProductByCategoryComponent,
     ViewCocktailComponent,
+    ProductByNameComponent,
   ],
   imports: [
     BrowserModule,
