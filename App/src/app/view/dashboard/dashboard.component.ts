@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConnectionService } from 'src/app/services/api/connection.service';
 import { cocktailI } from 'src/app/models/cocktail.interface';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,34 +15,5 @@ export class DashboardComponent implements OnInit {
   from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
   originally bred for hunting.`;
 
-  ngOnInit(): void {
-    
-    var products: cocktailI[];
-
-    this.api.getRamdomCocktail().subscribe((data) => {
-      products = data;
-      console.log(products);
-    });
-
-    this.api.getCocktailByName('margarita').subscribe((data) => {
-      products = data;
-      console.log(products);
-    });
-
-    this.api.getNonOrAlcoholicCocktail('Optional alcohol').subscribe((data) => {
-      products = data;
-      console.log(products);
-    });
-
-    this.api.getCocktailByCategory('Cocktail').subscribe((data) => {
-      products = data;
-      console.log(products);
-    });
-
-    this.api.getCocktailByGlass('Collins glass').subscribe((data) => {
-      products = data;
-      console.log(products);
-      console.log("By Glass");
-    });
-  }
+  ngOnInit(): void {}
 }
