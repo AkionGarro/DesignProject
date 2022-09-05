@@ -1,18 +1,29 @@
-<header class="navHeader">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <button mat-icon-button class="text-primary" (click)="goOldpage()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <nav class="navbar col-md-12 col-sm-12">
 
-  <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="goOldpage()" id="backButton">
-    <mat-icon>arrow_back</mat-icon>
-  </button>
+        <a (click)="goToDashBoard()">Home</a>
+        <a (click)="goToProductByCategory()">Category</a>
+        <a (click)="goToProductByAlcoholic()">Alcoholic</a>
+        <a (click)="goToProductByGlass()">By Glass</a>
+        <a (click)="goToProductByName()">By Name</a>
+      </nav>
+    </div>
+    <div class="col col-img-text img">
+      <a (click)="goToDashBoard()"><img src="../../../assets/logo.png" width="100px" ></a>
+    </div>
+    <div class="col col-img-text">
+        <div class="rounded-circle">
+          <strong>{{ api.userName[0] }}</strong> 
+        </div>
 
-  <h6>Bienvenid@: {{ api.userName }}</h6>
-
-  <nav class="categories">
-    
-    <a (click)="goToDashBoard()">Home</a>
-    <a (click)="goToProductByCategory()">Category</a>
-    <a (click)="goToProductByAlcoholic()">Alcoholic</a>
-    <a (click)="goToProductByGlass()">By Glass</a>
-    <a (click)="goToProductByName()">By Name</a>
-  </nav>
-
-</header>
+        <div  class="d-inline-flex p-1">
+          {{ api.userName }}
+        </div>
+    </div>
+  </div>
+</div>

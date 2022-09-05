@@ -1,54 +1,45 @@
-.navHeader {
-  width: 100%;
-  height: 60px;
-  background-color: #e5e5e5;
-  padding: 1rem;
-  height: 100%;
+.col{
+  display: flex;
 }
-
-.navHeader a {
+.container-fluid{
+  background-color: darkslateblue;
+}
+a{
+  margin-left: 0.8rem;
   text-decoration: none;
-  color: black;
-}
-.navHeader a:hover {
-  color: red;
   cursor: pointer;
 }
 
-.categories {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 0;
+.navbar a:hover{
+  color: blueviolet;
+}
+
+.mat-icon-button{
+  background-color: darkslateblue;
+}
+
+.col-img-text{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: right;
+  margin-top: 0.2rem;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 0.4rem;
+}
+
+.rounded-circle{
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(17, 36, 70, 0.712);
+  display: flex;
+  justify-content: center;
   align-items: center;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-@media (max-width: 780px) {
-  .categories {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 800,
-  'GRAD' 0,
-  'opsz' 48
-}
-
-#backButton, h6 {
-  display: inline-flex;
-  vertical-align: middle;
-  margin-bottom: 5px;
-}
-
-h6{
-  margin-left: 70vw;
+  margin-right: 0.1rem;
+  padding: 3px;
+  border: 2px solid rgb(56, 176, 206);
+  
 }

@@ -1,7 +1,7 @@
 /* BASIC */
 
 html {
-  background-color: #56baed;
+  background-color: darkslateblue;
 }
 
 body {
@@ -82,7 +82,7 @@ h2.active {
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-  background-color: #56baed;
+  background-color: darkslateblue;
   border: none;
   color: white;
   padding: 15px 80px;
@@ -106,7 +106,7 @@ input[type="reset"] {
 input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-  background-color: #39ace7;
+  background-color: darkslateblue;
 }
 
 input[type="button"]:active,

@@ -4,11 +4,12 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: #e5e5e5;
-  color: black;
+  color: aliceblue;
   text-align: center;
   padding: 1rem;
+  background-color: darkslateblue;
 }
 footer p {
-  color: black;
+  color: aliceblue;
   font-size: 20px;
 }
