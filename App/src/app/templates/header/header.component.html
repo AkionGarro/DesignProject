@@ -1,9 +1,18 @@
 <header class="navHeader">
+
+  <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="goOldpage()" id="backButton">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <h6>Bienvenid@: {{ api.userName }}</h6>
+
   <nav class="categories">
+    
     <a (click)="goToDashBoard()">Home</a>
     <a (click)="goToProductByCategory()">Category</a>
     <a (click)="goToProductByAlcoholic()">Alcoholic</a>
     <a (click)="goToProductByGlass()">By Glass</a>
     <a (click)="goToProductByName()">By Name</a>
   </nav>
+
 </header>

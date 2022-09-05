@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthConfig, OAuthService } from 'angular-oauth2-oidc';
 import { Subject } from 'rxjs';
+import { ConnectionService } from './api/connection.service';
 
 
 const  oAuthConfig: AuthConfig = {
@@ -30,7 +31,8 @@ export class GoogleApiService {
   userProfileSubject = new Subject<UserInfo>();
   private readonly  oAuthService: OAuthService;
 
-  constructor(private readonly oAuthService1: OAuthService, private router: Router) {
+  constructor(private readonly oAuthService1: OAuthService, private router: Router, 
+    private api: ConnectionService) {
     this.oAuthService = oAuthService1;
    }
 
@@ -41,13 +43,13 @@ export class GoogleApiService {
       this.oAuthService.tryLoginImplicitFlow().then(() => {
         if(!this.oAuthService.hasValidAccessToken()) {
           this.oAuthService.initLoginFlow();
+          console.log("No hay token");
         }else{
           this.oAuthService.loadUserProfile().then( (userProfile) => {
             console.log('Name: ', userProfile['info']['name']);
             console.log('Email: ', userProfile['info']['email']);
             console.log('Email Verified: ', userProfile['info']['email_verified']);
             this.userProfileSubject.next(userProfile as UserInfo);
-            this.router.navigate(['dashboard']);
           })
         }
       })

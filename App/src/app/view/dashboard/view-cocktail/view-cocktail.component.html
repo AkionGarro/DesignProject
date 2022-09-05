@@ -1,4 +1,4 @@
-
+<app-header></app-header>
     <h1>Cocktail {{ this.product['strDrink'] }}</h1>
     <div class="container">
         <div class="row">
@@ -13,23 +13,23 @@
             <h5>Cocktail type:</h5><span>&nbsp;&nbsp;{{this.product['strAlcoholic']}}</span> 
             <br>
             <h5>Ingredients:</h5>
-            <ul>
-                <li>{{this.product['strIngredient1']}}</li>
-                <li>{{this.product['strIngredient2']}}</li>
-                <li>{{this.product['strIngredient3']}}</li>
-                <li>{{this.product['strIngredient4']}}</li>
-                <li>{{this.product['strIngredient5']}}</li>
-                <li>{{this.product['strIngredient6']}}</li>
-                <li>{{this.product['strIngredient7']}}</li>
-                <li>{{this.product['strIngredient8']}}</li>
-                <li>{{this.product['strIngredient9']}}</li>
-                <li>{{this.product['strIngredient10']}}</li>
-                <li>{{this.product['strIngredient11']}}</li>
-                <li>{{this.product['strIngredient12']}}</li>
-                <li>{{this.product['strIngredient13']}}</li>
-                <li>{{this.product['strIngredient14']}}</li>
-                <li>{{this.product['strIngredient15']}}</li>
-            </ul>
+            <ol>
+                <li *ngIf="isIngredent(this.product['strIngredient1'])">{{this.product['strIngredient1']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient2'])">{{this.product['strIngredient2']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient3'])">{{this.product['strIngredient3']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient4'])">{{this.product['strIngredient4']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient5'])">{{this.product['strIngredient5']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient6'])">{{this.product['strIngredient6']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient7'])">{{this.product['strIngredient7']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient8'])">{{this.product['strIngredient8']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient9'])">{{this.product['strIngredient9']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient10'])">{{this.product['strIngredient10']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient11'])">{{this.product['strIngredient11']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient12'])">{{this.product['strIngredient12']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient13'])">{{this.product['strIngredient13']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient14'])">{{this.product['strIngredient14']}}</li>
+                <li *ngIf="isIngredent(this.product['strIngredient15'])">{{this.product['strIngredient15']}}</li>
+            </ol>
           </div>
 
     
@@ -41,3 +41,4 @@
 <p>{{ this.product["strInstructions"] }}</p>
 
 
+<app-footer></app-footer>

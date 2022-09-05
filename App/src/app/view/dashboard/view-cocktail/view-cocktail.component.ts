@@ -24,4 +24,12 @@ export class ViewCocktailComponent implements OnInit {
     });
   }
 
+  isIngredent(ingredent: any) {
+    if (ingredent == null) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
 }

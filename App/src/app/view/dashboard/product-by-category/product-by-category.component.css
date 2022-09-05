@@ -1,5 +1,10 @@
 .show-container {
   margin-top: 5rem;
+  /* center the button */
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .table {

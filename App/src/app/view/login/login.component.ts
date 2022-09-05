@@ -3,6 +3,8 @@ import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms
 import { ConnectionService } from 'src/app/services/api/connection.service';
 import { Router } from '@angular/router';
 import { GoogleApiService, UserInfo } from 'src/app/services/google-api.service';
+import { HeaderComponent } from 'src/app/templates/header/header.component';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -34,12 +36,20 @@ export class LoginComponent implements OnInit {
   goToDashBoard() {
     
     console.log(this.loginForm.value);
+    this.api.userName = this.loginForm.value.username;
+   
     this.router.navigate(['dashboard']);
   }
 
   signIn() {
     this.googleApi.iniciarSesion();
-    
+    this.googleApi.userProfileSubject.subscribe(info => {
+      this.userInfo = info;
+      this.userName = info.info.name;
+    }
+    );
+    this.api.userName = this.userName;
+    this.router.navigate(['dashboard']);
   }
 
   isLoggedIn(): boolean {

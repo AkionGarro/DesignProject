@@ -13,7 +13,8 @@ import { ProductByAlcoholicComponent } from './view/dashboard/product-by-alcohol
 import { ProductByGlassComponent } from './view/dashboard/product-by-glass/product-by-glass.component';
 import { ProductByCategoryComponent } from './view/dashboard/product-by-category/product-by-category.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ViewCocktailComponent } from './view/dashboard/view-cocktail/view-cocktail.component';
@@ -34,6 +35,8 @@ import { ProductByNameComponent } from './view/dashboard/product-by-name/product
   ],
   imports: [
     BrowserModule,
+    MatIconModule,
+    MatButtonModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,

@@ -19,29 +19,8 @@
       Search
     </button>
   </div>
-<!--
-  <div class="show-products">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Image</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let product of products">
-          <th scope="row">{{ product.idDrink }}</th>
-          <td>{{ product.strDrink }}</td>
-          <td>
-            <img class="img-size" src="{{ product.strDrinkThumb }}" alt="img" />
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>-->
-  <br>
 
+  <br>
 
   <div class="show-products" style="margin-left: 15rem">
     <mat-card class="example-card border border-dark" *ngFor="let product of products">
@@ -50,12 +29,8 @@
         <mat-card-title class="text">{{ product.idDrink }}</mat-card-title>
         <mat-card-subtitle class="text"> <strong>{{ product.strDrink }}</strong></mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image src="{{ product.strDrinkThumb }}" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <p>
-          {{ product.strInstructions }}
-        </p>
-      </mat-card-content>
+      <img mat-card-image src="{{ product.strDrinkThumb }}" alt="Drink image">
+      
       <mat-card-actions>
         <button mat-button class="btn btn-outline-dark " style="margin-left: 28%;" (click)="verCocktel(product.idDrink)">Ver</button>
       </mat-card-actions>

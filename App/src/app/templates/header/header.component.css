@@ -18,6 +18,7 @@
 .categories {
   width: 80%;
   margin: 0 auto;
+  margin-top: 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -32,4 +33,22 @@
     justify-content: center;
     gap: 1rem;
   }
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 800,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+#backButton, h6 {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+h6{
+  margin-left: 70vw;
 }

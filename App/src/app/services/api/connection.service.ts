@@ -10,6 +10,7 @@ import { categoryCocktail } from 'src/app/models/categoryCocktail';
 })
 export class ConnectionService {
   url: string = 'https://www.thecocktaildb.com/api/json/v1/1/';
+  userName: string = 'Usuario';
   constructor(private http: HttpClient) { }
 
   getCocktailByName(name: string): Observable<any[]> {
