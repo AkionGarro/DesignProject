@@ -15,7 +15,7 @@ export class ProductByGlassComponent implements OnInit {
     this.selectedValue = e.target.value;
   }
 
-  constructor(private api: ConnectionService, private router: Router) {}
+  constructor(public api: ConnectionService, private router: Router) {}
 
   ngOnInit(): void {
     this.api.getGlasses().subscribe((data) => {

@@ -19,7 +19,7 @@ export class ProductByCategoryComponent implements OnInit {
     this.selectedValue = e.target.value;
   }
 
-  constructor(private api: ConnectionService, private router: Router) {}
+  constructor(public api: ConnectionService, private router: Router) {}
 
   ngOnInit(): void {
     this.api.getCategories().subscribe((data) => {

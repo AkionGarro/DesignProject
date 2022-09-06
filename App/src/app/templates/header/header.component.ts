@@ -4,6 +4,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { Location } from '@angular/common';
 import { ConnectionService } from 'src/app/services/api/connection.service';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-header',
@@ -13,8 +14,17 @@ import { ConnectionService } from 'src/app/services/api/connection.service';
 
 export class HeaderComponent implements OnInit {
   constructor(private router: Router, private _location: Location, 
-    public api: ConnectionService) {
-
+    public api: ConnectionService, private breakpointObserver: BreakpointObserver) {
+      // detect screen size changes
+    this.breakpointObserver.observe([
+      "(max-width: 1200px)"
+    ]).subscribe((result: BreakpointState) => {
+      if (result.matches) {
+          api.cellSize = false;       
+      } else {
+          api.cellSize = true;
+      }
+    });
   }
 
   

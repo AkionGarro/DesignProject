@@ -1,6 +1,9 @@
 <app-header></app-header>
 
 <br><br>
+<div *ngIf="this.api.cellSize==false">
+  <br>
+</div>
 <div class="container-fluid" style="text-align: center;">
   <div class="row">
     <div class="col-ms-8 col-md-9 d-inline-flex p-3">
@@ -26,9 +29,7 @@
        
         <img mat-card-image src="{{ product.strDrinkThumb }}" alt="..." class="img-thumbnail">
         <mat-card-content>
-          <p>
-            {{ product.strInstructions }}
-          </p>
+          
         </mat-card-content>
         <mat-card-actions>
           <button type="button" mat-button class="verButton btn btn-lg btn-outline-info border border-info p-0" (click)="verCocktel(product.idDrink)"> Ver</button>

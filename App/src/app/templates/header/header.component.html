@@ -4,7 +4,7 @@
       <button mat-icon-button class="text-primary" (click)="goOldpage()">
         <mat-icon>arrow_back</mat-icon>
       </button>
-      <nav class="navbar col-md-12 col-sm-12">
+      <nav class="navbar col-md-12 col-sm-12" *ngIf="this.api.cellSize==true">
 
         <a (click)="goToDashBoard()">Home</a>
         <a (click)="goToProductByCategory()">Category</a>
@@ -24,6 +24,18 @@
       <div class="d-inline-flex p-1">
         {{ api.userName }}
       </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="this.api.cellSize==false">
+    <div class="col-sm-12">
+      <nav class="navbar col-md-12 col-sm-12">
+
+        <a (click)="goToDashBoard()">Home</a>
+        <a (click)="goToProductByCategory()">Category</a>
+        <a (click)="goToProductByAlcoholic()">Alcoholic</a>
+        <a (click)="goToProductByGlass()">By Glass</a>
+        <a (click)="goToProductByName()">By Name</a>
+      </nav>
     </div>
   </div>
 </div>
