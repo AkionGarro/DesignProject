@@ -1,43 +1,25 @@
-.show-container {
-    margin-top: 5rem;
-  }
-  
-  .table {
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 2rem;
-  }
-  
-  .show-categories {
-    margin-bottom: 4rem;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
-  .btn {
-    width: 8rem;
-  }
-  .img-size {
-    max-width: 8rem;
-    max-height: 8rem;
-  }
-  .example-card {
-    width: 20%;
-    display:inline-block;
-    margin: 0.5rem;
-  }
-  .mat-card-image{
-    border-radius: 15px;
-  }
-  
-  mat-card-title{
-    font-size: 1rem;
-    text-align: left;
-  }
-  
-  mat-card-subtitle{
-    font-size: 1rem;
-    text-align: center;
-  }
+.img-thumbnail{
+  width: 15rem;
+  margin: 0 auto;
+}
+.example-card {
+  display: inline-block;
+  align-content: center;
+  align-items: center;
+  width: 15rem;
+  margin: 0.5rem;
+}
+
+mat-card-actions{
+  text-align: center;
+}
+.col-cards{
+  text-align: center
+}
+.form-control{
+  align-content: right;
+}
+.btn-lg{
+  margin-left: 0;
+  padding-top: 0;
+}

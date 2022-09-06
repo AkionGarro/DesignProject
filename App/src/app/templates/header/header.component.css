@@ -1,9 +1,19 @@
+.container-fluid{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(15, 17, 44);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  padding: 0;
+  margin: 0;
+}
+
 .col{
   display: flex;
 }
-.container-fluid{
-  background-color: darkslateblue;
-}
+
 a{
   margin-left: 0.8rem;
   text-decoration: none;
@@ -15,13 +25,14 @@ a{
 }
 
 .mat-icon-button{
-  background-color: darkslateblue;
+  background-color: rgb(15, 17, 44);
 }
 
 .col-img-text{
   display: flex;
   justify-content: right;
   margin-top: 0.2rem;
+  margin-right: 1rem;
 }
 
 .img{

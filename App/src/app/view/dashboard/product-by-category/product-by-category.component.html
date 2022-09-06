@@ -1,8 +1,9 @@
 <app-header></app-header>
 
-<div class="show-container">
-  <div class="show-categories">
-    <div class="col-sm-10">
+<br><br>
+<div class="container-fluid" style="text-align: center;">
+  <div class="row">
+    <div class="col-ms-8 col-md-9 d-inline-flex p-3">
       <select class="form-control" name="categoryValues" (change)="changeCategoryProducts($event)">
         <option>Select Category</option>
 
@@ -11,59 +12,39 @@
         </option>
       </select>
     </div>
-    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"
-      (click)="newProduct()">
-      Search
-    </button>
+    <div class="col-ms-4 col-md-3 d-inline-flex p-3">
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="button" aria-pressed="false" autocomplete="off"
+        (click)="newProduct()" style="height: 38px;">
+        Search
+      </button>
+    </div>
   </div>
-
-  <!---
-  <div class="show-products">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Image</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let product of products">
-          <th scope="row">{{ product.idDrink }}</th>
-          <td>{{ product.strDrink }}</td>
-          <td>
-            <img class="img-size" src="{{ product.strDrinkThumb }}" alt="img" />
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>-->
-  <br>
-
-
-  <div class="show-products" style="margin-left: 15rem">
-    <mat-card class="example-card border border-dark" *ngFor="let product of products">
-      <mat-card-header>
-
-        <mat-card-title class="text">{{ product.idDrink }}</mat-card-title>
-        <mat-card-subtitle class="text"> <strong>{{ product.strDrink }}</strong></mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="{{ product.strDrinkThumb }}" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <p>
-          {{ product.strInstructions }}
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button type="button" mat-button class="btn btn-outline-dark" (click)="verCocktel(product.idDrink)"> Ver</button>
-      </mat-card-actions>
-    </mat-card>
-
+  <div class="row">
+    <div class="col-md-12 col-cards">
+      <mat-card class="example-card border border-info" *ngFor="let product of products">
+        <mat-card-header>
+  
+          <mat-card-title class="text">{{ product.idDrink }}</mat-card-title>
+          <mat-card-subtitle class="text"> <h6><strong>{{ product.strDrink.substring(0, 18) }}...</strong></h6></mat-card-subtitle>
+        </mat-card-header>
+       
+        <img mat-card-image src="{{ product.strDrinkThumb }}" alt="..." class="img-thumbnail">
+        <mat-card-content>
+          <p>
+            {{ product.strInstructions }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button type="button" mat-button class="verButton btn btn-lg btn-outline-info border border-info p-0" (click)="verCocktel(product.idDrink)"> Ver</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
-
-
-<br>
-<br>
-<br>
 </div>
+
+
+
+<br>
+<br>
+<br>
 <app-footer></app-footer>

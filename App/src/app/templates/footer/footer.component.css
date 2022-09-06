@@ -1,15 +1,14 @@
 footer {
   position: fixed;
-  height: 60px;
+  height: 3rem;
   bottom: 0;
   width: 100%;
-  background-color: #e5e5e5;
+  background-color: rgb(15, 17, 44);
   color: aliceblue;
   text-align: center;
-  padding: 1rem;
-  background-color: darkslateblue;
+  padding: 0.5rem;
 }
 footer p {
   color: aliceblue;
-  font-size: 20px;
+  font-size: 16px;
 }
