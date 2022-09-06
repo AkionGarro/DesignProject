@@ -11,7 +11,7 @@ export class ViewCocktailComponent implements OnInit {
 
   id: any;
   product = Array<any>();
-  constructor(private route: ActivatedRoute, private api: ConnectionService, private router: Router) { }
+  constructor(private route: ActivatedRoute, public api: ConnectionService, private router: Router) { }
     
 
   ngOnInit(): void {

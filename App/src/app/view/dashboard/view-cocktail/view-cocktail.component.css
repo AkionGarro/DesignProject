@@ -1,18 +1,20 @@
 img{
-    width: 25vw;
-    margin-left: 20px;
-    border-radius: 15px;
-    box-shadow: dimgrey 5px 5px 5px;
+    width: 23rem; 
+    margin-top: 0.5rem;
+    margin-right: 3rem; 
+}
+.img{
+    display: flex; 
+    justify-content: right;
 }
 
-
-h5{
-    text-align: left;
+.img-fluid{
+    max-width: 100%;
+    height: auto;
 }
-h1{
-    text-align: center;
+p, li{
+    margin-left: 3rem;
 }
-
-p{
-    font-size: 16px;
+.p{
+    margin-left: auto;
 }

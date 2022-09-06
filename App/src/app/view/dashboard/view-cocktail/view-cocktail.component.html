@@ -1,23 +1,23 @@
 <app-header></app-header>
 <br><br>
-<h1>Cocktail {{ this.product["strDrink"] }}</h1>
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col">
-      <div class="img">
-        <img
-          src="{{ this.product['strDrinkThumb'] }}"
-          alt="{{ this.product['strDrink'] }}"
-        />
+    <div class="col-md-12">
+      <div *ngIf="this.api.cellSize==false">
+        <br><br>
       </div>
+      <h3 class="font-weight-bold text-center">{{ this.product["strDrink"] }}</h3>
     </div>
-    <div class="col">
+  </div>
+  <div class="row">
+    <div class="col-md-5 img">
+      <img mat-card-image src="{{ this.product['strDrinkThumb'] }}" alt="{{ this.product['strDrink'] }}" class="img-thumbnail rounded mx-auto d-block">
+    </div>
+    <div class="col-md-7">
       <h5>Category:</h5>
-      <span> &nbsp;&nbsp; {{ this.product["strCategory"] }}</span>
-      <br />
+      <p> {{ this.product["strCategory"] }}</p>
       <h5>Cocktail type:</h5>
-      <span>&nbsp;&nbsp;{{ this.product["strAlcoholic"] }}</span>
-      <br />
+      <p>{{ this.product["strAlcoholic"] }}</p>
       <h5>Ingredients:</h5>
       <ol>
         <li *ngIf="isIngredent(this.product['strIngredient1'])">
@@ -67,9 +67,13 @@
         </li>
       </ol>
     </div>
-
-    <h4>Preparation:</h4>
-    <p>{{ this.product["strInstructions"] }}</p>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <br>
+      <h4 class="text-center">Preparation</h4>
+      <p class="text-center p">{{ this.product["strInstructions"] }}</p>
+    </div>
   </div>
 </div>
 <app-footer></app-footer>
