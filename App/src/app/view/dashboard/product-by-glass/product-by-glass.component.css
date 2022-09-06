@@ -4,22 +4,23 @@
 }
 .example-card {
   display: inline-block;
-  align-content: center;
-  align-items: center;
-  width: 15rem;
-  margin: 0.5rem;
+  align-content: left;
+  align-items: left;
+  width: 10rem;
+  margin: 0.3rem;
 }
 
 mat-card-actions{
   text-align: center;
 }
 .col-cards{
-  text-align: center
+  text-align: center;
 }
 .form-control{
   align-content: right;
 }
 .btn-lg{
-  margin-left: 0;
+  margin: 0 auto;
+
   padding-top: 0;
 }
